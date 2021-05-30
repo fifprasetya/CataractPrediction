@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">CataractPredict</string>
+    <string name="cataract_prediction">Cataract Prediction</string>
+    <string name="cek_kesehatan_mata_anda">Cek Kesehatan Mata Anda</string>
+    <string name="sekarang">Sekarang!</string>
+    <string name="try_it_now">Try it Now!</string>
+    <string name="new_article">New Article</string>
+    <string name="category">category</string>
+    <string name="headline">Headline</string>
+    <string name="date">date</string>
+    <string name="author">author</string>
+    <string name="description">Description</string>
+    <string name="predict">Predict</string>
+    <string name="result">Result</string>
+</resources>

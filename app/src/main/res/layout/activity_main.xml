@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="900dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/back_200"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:src="@drawable/cataractlogo"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="@id/layout_header"
+            app:layout_constraintTop_toTopOf="@id/layout_header"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cataract_prediction"
+            android:textColor="@color/green_700"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toEndOf="@id/logo"
+            app:layout_constraintTop_toTopOf="@id/logo"/>
+
+        <ImageView
+            android:id="@+id/iv_char"
+            android:layout_width="200dp"
+            android:layout_height="140dp"
+            android:src="@drawable/catarctchar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        
+        <TextView
+            android:id="@+id/cek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cek_kesehatan_mata_anda"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_char"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/green_700"
+           />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sekarang"
+            android:textColor="@color/green_700"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/cek"
+            app:layout_constraintTop_toBottomOf="@id/cek"/>
+        
+        <Button
+            android:id="@+id/btn_predict"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@string/try_it_now"
+            android:textSize="12sp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="16dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/layout_header">
+
+        <TextView
+            android:id="@+id/article"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/new_article"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="32dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/green_700"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="8dp"
+            android:id="@+id/rv_article"
+            tools:listitem="@layout/item_row_article"
+            app:layout_constraintTop_toBottomOf="@id/article"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="32dp"/>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
